@@ -23,7 +23,7 @@ header.tomatoheader {
   height: 500px;
 }
 
-header.contactsection { /* header.contactus */
+header.contactsection {
   background: url("images/bg3.jpg") no-repeat center center/cover;
   height: 500px;
 }
@@ -35,7 +35,7 @@ header.contactsection { /* header.contactus */
   width: 200px;
 }
 
-.navigationbar { /* .headergridmenu */
+.navigationbar { 
   position: absolute;
   top: 0;
   left: 0;
@@ -192,7 +192,7 @@ header.contactsection { /* header.contactus */
   margin-bottom: 5px;
 }
 
-.activitysection h3, .location h3 {
+.activitysection h3 {
   color: #4A8C3E;
   font-size: 22px;
   text-align: center;
@@ -421,7 +421,6 @@ header.contactsection { /* header.contactus */
 .tomatoarticles {
   display: flex;
   flex-wrap: wrap;
-  background: url("img/Union2.png") no-repeat center center/cover;
   flex-direction: column;
   align-items: center;
   gap: 60px;
@@ -543,11 +542,4 @@ header.contactsection { /* header.contactus */
 .backlink { 
   color: #57984C;
   font-size: 18px;
-}
-
-.mobile-menu a { /* .mobilemenu a */
-  padding: 10px;
-  text-decoration: none;
-  color: #324950;
-  display: block;
 }
