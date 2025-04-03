@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="responsive.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 
 <body>
@@ -43,114 +44,51 @@
   <div class="tomatosectioncontainer">
     <section class="tomatoarea">
       <header>
-        <h1>Agridera Fresh Market Tomato Hybrids</h1>
+        <h1>Agridera Fresh Market Carrot Varieties</h1>
         <h2>*****</h2>
       </header>
-
+    
       <article>
-        <p>Agridera aims to be one of the world's leading companies in the breeding, production, and marketing of tomato seeds. <b>We invest intensively in research and development to provide solutions to growers and consumers in numerous countries around the world.</b> In particular, we breed improved disease-resistant cultivars adapted to different markets globally.</p>
-        <p>Currently, emphasis is placed on combining Tomato Yellow Leaf Curl Virus (TYLCV) and Tomato Spotted Wilt Virus (TSWV) resistances with other soil borne diseases into superior tomato breeding lines and hybrids. Moreover, comprehensive efforts are being undertaken to develop varieties resistant to TBRFV virus (Tomato Brown Rugose Fruit Virus). </p>
-        <p>In terms of horticultural traits, breeding focuses on earliness, different fruit sizes, firmness, red fruit color, flavor, crack resistance, shelf life, and high/low temperature fruit set. Combinations of quality features and disease resistance are sought in round and elongated shapes.</p>
+        <p>Agridera aims to be one of the world's leading companies in the breeding, production, and marketing of carrot seeds. <b>We invest intensively in research and development to provide solutions to growers and consumers in numerous countries around the world.</b> In particular, we breed improved disease-resistant cultivars adapted to different markets globally.</p>
+        <p>Currently, emphasis is placed on developing varieties that offer resistance to pests, diseases, and environmental stress, as well as improving flavor, color, and root shape. Moreover, comprehensive efforts are being undertaken to breed carrots with enhanced storage and shelf life qualities.</p>
+        <p>In terms of horticultural traits, breeding focuses on earliness, different root sizes, firmness, color, flavor, crack resistance, shelf life, and high/low temperature adaptability. Combinations of quality features and disease resistance are sought in both short and long-root varieties.</p>
       </article>
-
+    
       <section class="highlighttextbox">
-        <p>Agridera Tomato breeding programs are focusing on three main segments: Greenhouse Indeterminate Tomatoes, Open-field Indeterminate Tomatoes, and Bush Type Open-field Tomatoes.</p>
+        <p>Agridera Carrot breeding programs are focusing on three main segments: Early Varieties, Storage Varieties, and High-Yield Varieties.</p>
       </section>
-
+    
       <section class="tomatoelements">
         <div class="tomatoelementcolumn">
-          <h3>Greenhouse Tomato Breeding Program</h3>
+          <h3>Early Carrot Breeding Program</h3>
           <hr>
-          <p><b>This breeding is aimed for the Spanish and Turkish markets.</b> For single and cluster picks, round fruit shape and resistances of TYLCV, TSWV, Nematodes, and FORL (Fusarium oxysporum f.sp. radicis-lycopersici). Some hybrids may include more resistances, such as Cladosporium and Leveillula Taurica (Lv).</p>
+          <p><b>This breeding is aimed for the European and North American markets.</b> Focus is on early maturing varieties that are perfect for fresh market consumption and salads. These varieties have high resistance to common diseases and pests, and produce tender, sweet roots.</p>
         </div>
-
+    
         <div class="tomatoelementcolumn">
-          <h3>Open-field Indeterminate Tomatoes</h3>
+          <h3>Storage Carrots</h3>
           <hr>
-          <p><b>This breeding is for Brazilian, Moroccan, and Turkish markets.</b> The main focus is on large round shape fruits (200 grams plus); and resistances of TYLCV, TSWV, Nematodes, and FORL. In the near future, F3 (Fusarium oxysporum f.sp. lycopersici) will be included as basic resistance in our cultivars.</p>
+          <p><b>This breeding is for markets in colder regions such as Northern Europe and Canada.</b> The main focus is on varieties that store well and maintain quality over long periods. These carrots have improved resistance to cracking and disease, and are perfect for winter storage.</p>
         </div>
-
+    
         <div class="tomatoelementcolumn">
-          <h3>Open-field Bush Type Tomatoes</h3>
+          <h3>High-Yield Carrots</h3>
           <hr>
-          <p><b>This breeding is for Mediterranean markets.</b> We breed round and elongated shapes, standard sizes (140-180 grams), and beef sizes (min. 180 grams up to 300 grams and more). We combine the resistances of TYLCV, TSWV, and Nematodes as basic resistances in our hybrids. However, some hybrids may include more resistances, such as Cladosporium and Leveillula Taurica (Lv).</p>
+          <p><b>This breeding is for markets requiring high-volume production, such as the United States and China.</b> We focus on high-yielding carrot varieties with excellent disease resistance, suitable for both fresh market sales and processing. These carrots have a consistent, uniform shape and size, making them ideal for large-scale farming.</p>
         </div>
       </section>
-
       <section class="highlighttextbox">
         <p>Agridera operates through international and local distributors around the world.</p>
       </section>
+    </section> 
 
-      <section class="imageblock">
-        <div class="cardcontainer">
-          <a href="tomatpage.html">
-            <img src="images/tomato1.png" alt="TAG 1000 Tomato">
+      <section class="imageblock" id="app">
+        <div class="cardcontainer" v-for="product in products" :key="product.id">
+          <a :href="'tomatpage.html#' + product.id">
+            <img :src="product.image" :alt="product.title">
             <div class="textcontent">
-              <h1>TAG 1000 (TAG 853)</h1>
-              <p>Tomato Determinate Red Standard Round</p>
-            </div>
-          </a>
-        </div>
-        <div class="cardcontainer">
-          <a href="tomatpage.html">
-            <img src="images/tomato2.png" alt="TAG 1001 Tomato">
-            <div class="textcontent">
-              <h1>TAG 1001 (TAG 855)</h1>
-              <p>Tomato Determinate Red Standard Round</p>
-            </div>
-          </a>
-        </div>
-        <div class="cardcontainer">
-          <a href="tomatpage.html">
-            <img src="images/tomato3.png" alt="TAG 1002 Tomato">
-            <div class="textcontent">
-              <h1>TAG 1002 (TAG 809)</h1>
-              <p>Tomato Determinate Red Standard Round</p>
-            </div>
-          </a>
-        </div>
-        <div class="cardcontainer">
-          <a href="tomatpage.html">
-            <img src="images/tomato4.png" alt="TAG 1003 Tomato">
-            <div class="textcontent">
-              <h1>TAG 1003 (TAG 834)</h1>
-              <p>Tomato Determinate Red Standard Round</p>
-            </div>
-          </a>
-        </div>
-        <div class="cardcontainer">
-          <a href="tomatpage.html">
-            <img src="images/tomato5.png" alt="TAG 1004 Tomato">
-            <div class="textcontent">
-              <h1>TAG 1004 (TAG 848)</h1>
-              <p>Tomato Determinate Red BEEF Round</p>
-            </div>
-          </a>
-        </div>
-        <div class="cardcontainer">
-          <a href="tomatpage.html">
-            <img src="images/tomato6.png" alt="TAG 1005 Tomato">
-            <div class="textcontent">
-              <h1>TAG 1005 (TAG 800)</h1>
-              <p>Tomato Determinate Red Standard Round</p>
-            </div>
-          </a>
-        </div>
-        <div class="cardcontainer">
-          <a href="tomatpage.html">
-            <img src="images/tomato7.png" alt="TAG 1006 Tomato">
-            <div class="textcontent">
-              <h1>TAG 1006 (TAG 898)</h1>
-              <p>Tomato Determinate Red Elongated</p>
-            </div>
-          </a>
-        </div>
-        <div class="cardcontainer">
-          <a href="tomatpage.html">
-            <img src="images/tomato8.png" alt="TAG 1007 Tomato">
-            <div class="textcontent">
-              <h1>TAG 1007 (TAG 816)</h1>
-              <p>Tomato Determinate Red Elongated</p>
+              <h1>{{ product.title }}</h1>
+              <p>{{ product.short_text }}</p>
             </div>
           </a>
         </div>
@@ -182,5 +120,6 @@
   <footer class="footersection">
     <p>AGRIDERA SEEDS & AGRICULTURE LTD. В© 2020</p>
   </footer>
+  <script src="js/main.js"></script>
 </body>
 </html>
