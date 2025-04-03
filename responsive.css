@@ -1,0 +1,162 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.burger-menu {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .maincontent > div {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+  }
+  .contentfoto {
+    width: 100%;
+    height: auto;
+  }
+  .linkbar {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    cursor: pointer;
+  }
+  .burger-menu div {
+    width: 30px;
+    height: 3px;
+    background-color: #324950;
+    margin: 6px 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .activitysection {
+    flex-direction: column;
+    align-items: center;
+  }
+  .activitysection > div {
+    max-width: 100%;
+  }
+  .tomatoelements {
+    flex-direction: column;
+    width: 100%;
+  }
+  .tomatoelementcolumn {
+    width: 100%;
+    text-align: center;
+  }
+  .columnwrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  header.mainpage {
+    height: 600px;
+  }
+  header.tomatoheader,
+  header.contactsection {
+    height: 400px;
+  }
+  .maincontent h1 {
+    font-size: 48px;
+  }
+  .maincontent h2 {
+    font-size: 16px;
+  }
+  .actionbtn {
+    padding: 10px 18px;
+    margin-top: 40px;
+  }
+  .searchinputfield {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+  .headerlogo {
+    width: 150px;
+    top: 5px;
+    left: 5px;
+  }
+  .searchbar {
+    top: 5px;
+    right: 5px;
+  }
+  .maincontent h1 {
+    font-size: 40px;
+  }
+  .activitysection h1 {
+    font-size: 42px;
+  }
+  .activitysection h2 {
+    font-size: 18px;
+  }
+  .burger-menu {
+    display: border;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header.mainpage {
+    height: 500px;
+  }
+  header.tomatoheader,
+  header.contactsection {
+    height: 350px;
+  }
+  .maincontent h1 {
+    font-size: 36px;
+  }
+  .maincontent h2 {
+    font-size: 14px;
+  }
+  .burger-menu div {
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+  }
+  .actionbtn {
+    padding: 8px 16px;
+  }
+  .footersection {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .headerlogo {
+    width: 120px;
+  }
+  .maincontent h1 {
+    font-size: 32px;
+  }
+  .maincontent h2 {
+    font-size: 12px;
+  }
+  .searchinputfield {
+    font-size: 14px;
+  }
+  .actionbtn {
+    padding: 6px 12px;
+  }
+  .footersection {
+    font-size: 12px;
+  }
+  .footerlinks {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
