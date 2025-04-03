@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="responsive.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 
 <body>
@@ -41,65 +42,51 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <main class="wrappersection">
+  <main class="wrappersection" id="app">
     <section class="columnsection">
       <div class="columnwrapper">
-        
         <div class="textbox">
-          <a href="tomat1.html" class="backlink">Return to all tomatoes</a>
-          <h1>TAG 1002 (TAG 809)</h1>
-          <h2>Tomato Determinate Red Standard Round</h2>
+          <a href="tomat1.html" class="backlink">Return to all carrots</a>
+          <h1>{{ product.title }}</h1>
+          <h2>{{ product.short_text }}</h2>
           <h3>*****</h3>
-
+  
           <div class="highlightcontainer">
-            <img src="images/Tomatologo.png" class="highlighticon" alt="Tomato Logo">
-            <p><strong>Very high yield and excellent fruit quality!</strong></p>
+            <img src="images/Tomatologo.png" class="highlighticon">
+            <p>Very high yield and excellent fruits quality!</p>
           </div>
-
+  
           <h3>Characteristics</h3>
           <hr class="separatorline">
           <div class="characteristics">
-            <p><strong>Resistance:</strong> HR: ToMV:0-2; Fol: 1,2; Ve/Vd; IR: TYLCV</p>
+            <p><strong>Resistance:</strong> {{ product.desc }}</p>
           </div>
-
-          <h3>Plant</h3>
-          <hr class="separatorline">
-          <ul>
-            <li>Strong vigor providing good leaf coverage.</li>
-            <li>Very high productivity with good fruit setting.</li>
-            <li>Early-matured variety.</li>
-          </ul>
-
-          <h3>Fruit</h3>
-          <hr class="separatorline">
-          <ul>
-            <li>Long shelf life on plant and post-harvest.</li>
-            <li>Nice shiny deep red color.</li>
-            <li>Average fruit size: 140-160 grams.</li>
-          </ul>
+  
+          <div v-if="btnVisible === 0" class="pdfbutton">
+            <button @click="addToCart(product.id)">
+              <img src="images/pdf.png" alt="Add to cart"> Add to cart
+            </button>
+          </div>
+  
+          <div v-if="btnVisible === 1" class="pdfbutton">
+            <a href="contact.html">
+              <button>
+                <img src="images/pdf.png" alt="Go to cart"> Go to cart
+              </button>
+            </a>
+          </div>
         </div>
-
+  
         <div class="imagebox">
-          <img src="images/imagetomato.jpg" alt="Tomato Image">
+          <img :src="product.image" alt="Carrot Image"> 
           <div class="pdfbutton">
-            <a href="#"><img src="images/pdf.png" alt="Download PDF"></a>
+            <a :href="product.pdf_link"><img src="images/pdf.png" alt="Download PDF"></a>
           </div>
-
-          <h3>Cycle</h3>
-          <hr class="separatorline">
-          <ul>
-            <li>Spring</li>
-            <li>Fall</li>
-            <li>Winter</li>
-          </ul>
-
-          <h3>Color</h3>
-          <hr class="separatorline">
-          <p>Red</p>
         </div>
       </div>
     </section>
   </main>
+  
 
   <footer class="footerlinks">
     <nav>
@@ -125,7 +112,6 @@
   <footer class="footersection">
     <p>AGRIDERA SEEDS & AGRICULTURE LTD. © 2020</p>
   </footer>
-
+  <script src="js/main.js"></script>
 </body>
-
 </html>
