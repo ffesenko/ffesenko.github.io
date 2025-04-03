@@ -1,3 +1,4 @@
+/* ===== Основной CSS ===== */
 body {
   font-family: 'Roboto Slab', serif;
   margin: 0;
@@ -140,7 +141,7 @@ header.contactsection {
   color: #57984C;
   width: 100%;
   font-size: 18px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .activitysection {
@@ -181,7 +182,8 @@ header.contactsection {
   margin-bottom: 5px;
 }
 
-.activitysection h3, .location h3 {
+.activitysection h3,
+.location h3 {
   color: #4A8C3E;
   font-size: 22px;
   text-align: center;
@@ -259,19 +261,21 @@ header.contactsection {
 }
 
 .menucontainer {
-  background-color: #ffffff;
-  padding: 20px;
-  text-align: center;
+  background-color: rgb(241, 241, 241);
   display: flex;
+  flex-wrap: wrap;      
   justify-content: center;
-  gap: 80px;
+  gap: 20px;           
+  padding: 10px;
 }
 
 .menuitemcontainer {
-  align-items: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
+  width: 150px;
+  margin: 10px;
 }
 
 .tomatoarea {
@@ -288,14 +292,16 @@ header.contactsection {
   border-radius: 20px;
 }
 
-.addressheader h1, .tomatoarea h1 { 
+.addressheader h1,
+.tomatoarea h1 { 
   margin: 10px 0;
   font-size: 42px;
   font-weight: 700;
   color: #2D3F45;
 }
 
-.addressheader h2, .tomatoarea h2 {
+.addressheader h2,
+.tomatoarea h2 {
   color: #4B8A3D;
   font-size: 19px; 
 }
@@ -343,7 +349,6 @@ header.contactsection {
   gap: 20px;
   display: flex;
   flex-wrap: wrap;
-  gap: 5%;
   justify-content: center;
   align-items: stretch;
 }
@@ -366,7 +371,7 @@ header.contactsection {
   margin: 10px 0;
 }
 
-.cardcontainer .textcontent p { /* .text p */
+.cardcontainer .textcontent p {
   margin: 10px 15px;
   text-align: center;
   font-size: 14px;
@@ -385,7 +390,7 @@ header.contactsection {
   display: block;
 }
 
-.cardcontainer .textcontent { /*  .text */
+.cardcontainer .textcontent {
   padding: 15px;
   background-color: #ffffff;
   flex-grow: 1;
@@ -449,20 +454,20 @@ header.contactsection {
   border-radius: 15px;
 }
 
-.pdfbutton { 
+.pdfbutton {
   display: flex;
   justify-content: center;
   margin-top: 10px;
 }
 
-.pdfbutton img { 
+.pdfbutton img {
   width: 250px;
   height: auto;
   transition: transform 0.3s ease, opacity 0.3s ease;
   cursor: pointer;
 }
 
-.pdfbutton img:hover { 
+.pdfbutton img:hover {
   transform: scale(1.1);
   opacity: 0.8;
 }
@@ -473,15 +478,15 @@ header.contactsection {
   border: none;
   width: 40%;
   margin: 20px 0;
-  border-radius: 5px; 
+  border-radius: 5px;
 }
 
 .highlightcontainer {
-  color:red;
+  color: red;
   background-color: #e6e6e6;
   padding: 10px;
   text-align: left;
-  display: flex; 
+  display: flex;
   align-items: center;
   border-radius: 20px;
 }
@@ -489,7 +494,7 @@ header.contactsection {
 .highlighticon {
   width: 80px;
   height: auto;
-  margin-right: 10px; 
+  margin-right: 10px;
 }
 
 label {
@@ -507,7 +512,7 @@ input, select, textarea {
 
 input[type="submit"] {
   width: 200px;
-  height: 50px; 
+  height: 50px;
   background-color: #57984C;
   color: white;
   font-size: 18px;
@@ -622,7 +627,7 @@ input[type="submit"] {
   background-color: #f4f4f4;
   padding: 2rem 0;
   text-align: center;
-  margin-bottom: 2rem; 
+  margin-bottom: 2rem;
 }
 
 .address-content h3 {
@@ -637,13 +642,6 @@ input[type="submit"] {
   color: #333;
 }
 
-.green-line {
-  width: 50px;
-  height: 2px;
-  background-color: #57984C;
-  margin-bottom: 1rem;
-}
-
 .phone-number {
   color: #57984C;
   text-decoration: none;
@@ -651,4 +649,44 @@ input[type="submit"] {
 
 .phone-number:hover {
   text-decoration: underline;
+}
+
+.burger-menu {
+  position: relative;
+  background: #fff;
+  border: 1px solid #ddd;
+  width: 200px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.hidden-checkbox {
+  display: none;
+}
+
+.toggle-menu-btn {
+  font-size: 24px;
+  cursor: pointer;
+  display: block;
+  padding: 10px;
+  color: #324950;
+  background: none;
+  border: none;
+}
+
+.burger-menu a {
+  display: none;
+  text-decoration: none;
+  color: #324950;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  transition: background 0.3s;
+}
+
+.burger-menu a:hover {
+  background: #f5f5f5;
+}
+
+.hidden-checkbox:checked ~ a {
+  display: block;
 }
